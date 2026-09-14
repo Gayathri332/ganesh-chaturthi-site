@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2B0A12;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(212, 166, 74, 0.10) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(193, 68, 46, 0.12) 0%, transparent 50%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(212, 166, 74, 0.035) 0px,
+      rgba(212, 166, 74, 0.035) 1px,
+      transparent 1px,
+      transparent 34px
+    );
+  color: #F6ECDA;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Temple-arch panel silhouette used by the Ask Ganapati widget */
+.temple-arch {
+  border-radius: 999px 999px 18px 18px / 90px 90px 18px 18px;
+  border: 1px solid rgba(212, 166, 74, 0.35);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.55);
+}
+
+/* Diya-flame scrollbar for the chat panel */
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(212, 166, 74, 0.4);
+  border-radius: 999px;
+}
+.chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #E3BE6E;
+  outline-offset: 3px;
+}
+
+/* Fan carousel card sizing — heights match the multipliers baked into
+   card-fan-carousel.tsx (getHeightMultiplier ideal px per breakpoint). */
+.fan-layout {
+  height: 22rem;
+}
+.fan-card {
+  position: absolute;
+  width: 11.5rem;
+  height: 15.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.55);
+  border: 3px solid rgba(246, 236, 218, 0.85);
+  will-change: transform, opacity;
+}
+
+@media (min-width: 480px) {
+  .fan-layout {
+    height: 26rem;
+  }
+  .fan-card {
+    width: 13rem;
+    height: 17.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .fan-layout {
+    height: 28rem;
+  }
+  .fan-card {
+    width: 14.5rem;
+    height: 19.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .fan-layout {
+    height: 34rem;
+  }
+  .fan-card {
+    width: 16.5rem;
+    height: 22rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fan-layout {
+    height: 38rem;
+  }
+  .fan-card {
+    width: 18.5rem;
+    height: 25rem;
+  }
+}
