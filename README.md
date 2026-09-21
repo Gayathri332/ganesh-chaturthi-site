@@ -3,6 +3,8 @@
 An interactive Ganesh Chaturthi greeting built with Next.js (App Router),
 TypeScript, and Tailwind CSS:
 
+Link: https://ganesh-chaturthi-site-ten.vercel.app/
+
 - **Hero** with a festival headline and a hand-drawn underline flourish.
 - **The Bappa Gallery** — the fan-carousel component you provided
   (`components/ui/card-fan-carousel.tsx`, powered by GSAP), showing
